@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://chhv730ywdl17"]
+
+[ext_resource type="Script" uid="uid://bxtspbmbo2nw7" path="res://game_script.gd" id="1_mlf6e"]
+[ext_resource type="Texture2D" uid="uid://b100gn0id4yfc" path="res://icon.svg" id="1_po0ka"]
+
+[node name="GameScene" type="Control" unique_id=1473570368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mlf6e")
+
+[node name="ClickerButton" type="Button" parent="." unique_id=979354977]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("1_po0ka")
+icon_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=303975822]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 399.0
+offset_right = 655.0
+offset_bottom = 422.0
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="UpgradeButton" type="Button" parent="." unique_id=473701286]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 304.0
+offset_right = 358.0
+offset_bottom = 358.0
+text = "Upgrade Clicker
+Cost: 100"
+
+[node name="AutoClickerButton" type="Button" parent="." unique_id=31416724]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 295.0
+offset_right = 952.0
+offset_bottom = 371.0
+text = "Buy Autoclicker
+Cost: 250"
+
+[node name="Autoclicker Timer" type="Timer" parent="AutoClickerButton" unique_id=378843289]
+wait_time = 5.0
+
+[connection signal="pressed" from="ClickerButton" to="." method="_on_pressed"]
+[connection signal="pressed" from="UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="AutoClickerButton" to="." method="_on_auto_clicker_button_pressed"]
+[connection signal="timeout" from="AutoClickerButton/Autoclicker Timer" to="." method="_on_autoclicker_timer_timeout"]
