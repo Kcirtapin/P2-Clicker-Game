@@ -54,6 +54,7 @@ func _on_autoclicker_timer_timeout() -> void:
 
 func _on_auto_clicker_button_pressed() -> void:
 	if score >= upgrade_auto_cost:
+		change_score(-1 * upgrade_auto_cost)
 		upgrade_auto_cost *= 2
 		auto_button.text = "Upgrade Autoclicker\nCost: " + str(upgrade_auto_cost)
 		if auto_timer.is_stopped():

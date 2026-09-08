@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chhv730ywdl17"]
 
 [ext_resource type="Script" uid="uid://bxtspbmbo2nw7" path="res://game_script.gd" id="1_mlf6e"]
-[ext_resource type="Texture2D" uid="uid://b100gn0id4yfc" path="res://icon.svg" id="1_po0ka"]
+[ext_resource type="Texture2D" uid="uid://djvo70322bpln" path="res://icon.svg" id="1_po0ka"]
 
 [node name="GameScene" type="Control" unique_id=1473570368]
 layout_mode = 3

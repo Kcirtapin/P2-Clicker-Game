@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="P2-Clicker-Game"
+run/main_scene="uid://chhv730ywdl17"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
