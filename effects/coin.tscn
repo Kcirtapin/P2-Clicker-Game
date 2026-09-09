@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cc13tmvuil1fj"]
 
 [ext_resource type="Texture2D" uid="uid://dy6ysevrvvvvn" path="res://assets/Animated_Coins.png" id="1_d5gmh"]
+[ext_resource type="Script" uid="uid://dq3f8v5d4j585" path="res://effects/coin.gd" id="1_vtlik"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ojnr2"]
+radius = 8.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0t63x"]
 atlas = ExtResource("1_d5gmh")
@@ -69,10 +71,15 @@ animations = [{
 }]
 
 [node name="Coin" type="RigidBody2D" unique_id=1460877110]
+script = ExtResource("1_vtlik")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1068233916]
 shape = SubResource("CircleShape2D_ojnr2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1739046812]
 sprite_frames = SubResource("SpriteFrames_emoma")
-frame_progress = 0.16816856
+frame_progress = 0.64966893
+
+[node name="ExitDetector" type="VisibleOnScreenNotifier2D" parent="." unique_id=705042459]
+
+[connection signal="screen_exited" from="ExitDetector" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

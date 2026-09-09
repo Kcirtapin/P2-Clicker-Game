@@ -9,6 +9,7 @@ var upgrade_auto_cost:int = 250
 @onready var auto_button:Button = $AutoClickerButton
 @onready var auto_timer:Timer = $"AutoClickerButton/Autoclicker Timer"
 
+@export var coin_scene:PackedScene
 
 # Called upon initialization
 func _ready() -> void:
@@ -31,8 +32,11 @@ func change_increment(change:int) -> int:
 
 func click() -> void:
 	change_score(increment)
+	var coin = coin_scene.instantiate()
+	add_child(coin)
+	coin.global_position = clicker_button.position + Vector2(50,50)
 
-# Rciever function for button
+# Receever function for button
 func _on_pressed() -> void:
 	click()
 

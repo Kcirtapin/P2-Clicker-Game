@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chhv730ywdl17"]
 
 [ext_resource type="Script" uid="uid://bxtspbmbo2nw7" path="res://main/game_script.gd" id="1_tclkk"]
+[ext_resource type="PackedScene" uid="uid://cc13tmvuil1fj" path="res://effects/coin.tscn" id="2_13hv2"]
 [ext_resource type="PackedScene" uid="uid://ddtpncjg07hge" path="res://buttons/clicker_button.tscn" id="2_ivcix"]
 
 [node name="GameScene" type="Control" unique_id=1473570368]
@@ -11,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tclkk")
+coin_scene = ExtResource("2_13hv2")
 
 [node name="ClickerButton" parent="." unique_id=1690136097 instance=ExtResource("2_ivcix")]
 layout_mode = 0
