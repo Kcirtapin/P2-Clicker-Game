@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cc13tmvuil1fj"]
 
-[ext_resource type="Texture2D" uid="uid://dy6ysevrvvvvn" path="res://Animated_Coins.png" id="1_d5gmh"]
+[ext_resource type="Texture2D" uid="uid://dy6ysevrvvvvn" path="res://assets/Animated_Coins.png" id="1_d5gmh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ojnr2"]
 

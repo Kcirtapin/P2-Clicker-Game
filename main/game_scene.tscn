@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://chhv730ywdl17"]
+
+[ext_resource type="Script" uid="uid://bxtspbmbo2nw7" path="res://main/game_script.gd" id="1_tclkk"]
+[ext_resource type="PackedScene" uid="uid://ddtpncjg07hge" path="res://buttons/clicker_button.tscn" id="2_ivcix"]
+
+[node name="GameScene" type="Control" unique_id=1473570368]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tclkk")
+
+[node name="ClickerButton" parent="." unique_id=1690136097 instance=ExtResource("2_ivcix")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 513.0
+offset_top = 390.0
+offset_right = 663.0
+offset_bottom = 540.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=303975822]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 318.0
+offset_right = 664.0
+offset_bottom = 341.0
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="AutoClickerButton" type="Button" parent="." unique_id=31416724]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 250.0
+offset_right = 334.0
+offset_bottom = 326.0
+text = "Buy Autoclicker
+Cost: 250"
+
+[node name="Autoclicker Timer" type="Timer" parent="AutoClickerButton" unique_id=378843289]
+wait_time = 5.0
+
+[connection signal="pressed" from="ClickerButton" to="." method="_on_pressed"]
+[connection signal="upgrade_pressed" from="ClickerButton" to="." method="_on_clicker_button_upgrade_pressed"]
+[connection signal="pressed" from="AutoClickerButton" to="." method="_on_auto_clicker_button_pressed"]
+[connection signal="timeout" from="AutoClickerButton/Autoclicker Timer" to="." method="_on_autoclicker_timer_timeout"]
