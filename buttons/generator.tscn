@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://s8p7oyl72ha8"]
+
+[ext_resource type="Script" uid="uid://dtjrtsda61afl" path="res://buttons/generator.gd" id="1_jdwji"]
+[ext_resource type="PackedScene" uid="uid://dnmi3bcypifgy" path="res://effects/dandelion_seed.tscn" id="2_02u8u"]
+
+[node name="AutoClickerButton" type="Button" unique_id=1136185261]
+offset_left = 205.0
+offset_top = 250.0
+offset_right = 334.0
+offset_bottom = 326.0
+text = "Buy Autoclicker
+Cost: 250"
+script = ExtResource("1_jdwji")
+dand_seed = ExtResource("2_02u8u")
+
+[node name="Autoclicker Timer" type="Timer" parent="." unique_id=1470335418]
+wait_time = 2.0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="timeout" from="Autoclicker Timer" to="." method="_on_autoclicker_timer_timeout"]

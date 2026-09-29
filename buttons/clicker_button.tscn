@@ -1,7 +1,15 @@
 [gd_scene format=3 uid="uid://ddtpncjg07hge"]
 
-[ext_resource type="Texture2D" uid="uid://djvo70322bpln" path="res://assets/icon.svg" id="1_dniwd"]
+[ext_resource type="Texture2D" uid="uid://7d1vc5cvlsv5" path="res://assets/Dandelion_plant/sprite_0.png" id="1_sg3v2"]
 [ext_resource type="Script" uid="uid://dan38l6350xtj" path="res://buttons/clicker_button.gd" id="2_g3iiw"]
+[ext_resource type="Texture2D" uid="uid://dommw7pcttxf6" path="res://assets/Dandelion_plant/sprite_1.png" id="2_scilc"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ojnr2"]
+frames = 2
+frame_0/texture = ExtResource("1_sg3v2")
+frame_0/duration = 0.27
+frame_1/texture = ExtResource("2_scilc")
+frame_1/duration = 0.28
 
 [node name="ClickerButton" type="Button" unique_id=1690136097]
 anchors_preset = 8
@@ -15,7 +23,7 @@ offset_right = 75.0
 offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
-icon = ExtResource("1_dniwd")
+icon = SubResource("AnimatedTexture_ojnr2")
 icon_alignment = 1
 script = ExtResource("2_g3iiw")
 
