@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ddtpncjg07hge" path="res://buttons/clicker_button.tscn" id="2_ivcix"]
 [ext_resource type="Texture2D" uid="uid://4nyp1bcdwma7" path="res://assets/0f54904dfde04938a3928999b432341c-2150365069.webp" id="3_crys4"]
 [ext_resource type="PackedScene" uid="uid://s8p7oyl72ha8" path="res://buttons/generator.tscn" id="4_13hv2"]
+[ext_resource type="AudioStream" uid="uid://ct4sucelkv167" path="res://assets/audio/Chesed battle 1.mp3" id="6_paxvw"]
 
 [node name="GameScene" type="Control" unique_id=1473570368]
 layout_mode = 3
@@ -81,6 +82,11 @@ generator_cost = 50000
 strength = 100000
 display_name = "Strong Generator"
 game_manager = NodePath("..")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1573727763]
+stream = ExtResource("6_paxvw")
+autoplay = true
+parameters/looping = true
 
 [connection signal="button_down" from="ClickerButton" to="." method="_on_clicker_button_button_down"]
 [connection signal="pressed" from="ClickerButton" to="." method="_on_pressed"]

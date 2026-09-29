@@ -34,12 +34,6 @@ func click() -> void:
 	coin.global_position = get_viewport().get_mouse_position()
 
 # Receever function for button
-#func _on_pressed() -> void:
-	#click()
-	
-
-
-
-func _on_clicker_button_button_down() -> void:
-	print("coin")
+func _on_pressed() -> void:
 	click()
+	
