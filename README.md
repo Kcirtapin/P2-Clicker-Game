@@ -1,6 +1,7 @@
 # P2-Clicker-Game
 
 Made by Patrick Breslin
+Itch.io link https://procyon40.itch.io/game-design-class-project-2-clicker-project
 
 Artist statement:
 	This game is supposed to be a serene, natural scene. I want the player to feel calm, or at least feel the dissonance of frantic clicking versus the music.
