@@ -12,11 +12,7 @@ var increment: int = 10
 func _ready() -> void:
 	score = 0
 
-# Continuously called during main loop
-func _process(delta:float) -> void:
-	pass
-
-# Add the argument to the score and label
+# Add the argument to the score and update the label
 func change_score(change:int) -> int:
 	score += change
 	score_label.text = "Score: " + str(score)
@@ -27,13 +23,10 @@ func change_increment(change:int) -> int:
 	increment += change
 	return increment
 
-func click() -> void:
+# Adds the increment to score on clicker button
+func _on_pressed() -> void:
 	change_score(increment)
 	var coin = coin_scene.instantiate()
 	add_child(coin)
 	coin.global_position = get_viewport().get_mouse_position()
-
-# Receever function for button
-func _on_pressed() -> void:
-	click()
 	
