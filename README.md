@@ -1,6 +1,7 @@
 # P2-Clicker-Game
 
 Made by Patrick Breslin
+
 Itch.io link https://procyon40.itch.io/game-design-class-project-2-clicker-project
 
 Artist statement:
